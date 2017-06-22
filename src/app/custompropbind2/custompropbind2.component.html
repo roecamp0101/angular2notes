@@ -1,0 +1,14 @@
+<!--loop for parent information-->
+<ul class="list-unstyled">
+    <li *ngFor="let info of information">{{info}}</li>
+</ul>
+
+
+<!--loop for parent information-->
+<ul *ngFor="let employ of employees" class="list-unstyled">
+    <li>{{employ.name}} {{employ.last}}</li>
+</ul>
+
+
+<!-- buttonInfo method being used for click method-->
+<button type="button" class="btn btn-danger" (click)="buttonInfo()">Click for output info</button>

@@ -1,0 +1,5 @@
+<!-- input field with locref variable -->
+<input type="text" (input)="onlocalinfo()" #locref>
+
+<!-- span with innerText property binding of locref value -->
+<span [innerText]="locref.value"></span>

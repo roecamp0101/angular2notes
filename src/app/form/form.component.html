@@ -1,0 +1,89 @@
+<div class="container">
+  <h2>Vertical (basic) form</h2>
+  <!-- In order to capture the submit action of a form use the '( ngSubmit )' method -->
+  <!-- in order to get a local reference to the form we add a ' #f ' to the form and then pass it within our method for ngSubmit ' onSubmit(f) ' -->
+  <!-- in order to get access to the form angular creates automatically we set local variable #f equal to ' ngForm ' -->
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <!-- In order to tell angular which form element you want control of you use 'ngModel' -->
+      <!-- second you add the 'name' of the input field -->
+      
+      <input type="email" class="form-control" id="email" placeholder="Enter email" 
+      
+      ngModel
+      name="email"
+      required
+      email
+      #email="ngModel"
+      >
+      <!-- ' email ' is a built directive by angular to make sure the email field is correct -->
+      <!-- in order to get access to this particular form control within the form we use a local reference ' #email ' and assign it to ' ngModel ' -->
+      <!-- error message -->
+      <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+        <!-- In order to tell angular which form element you want control of you use 'ngModel' -->
+        <!-- second you add the 'name' of the input field -->
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+      ngModel
+      name="pwd"
+      required
+      #password="ngModel">
+      <!-- in order to get access to this particular form control within the form we use a local reference ' #password ' and assign it to ' ngModel ' -->
+      <!-- error message -->
+      <span class="help-block" *ngIf="!password.valid && password.touched">Please enter a valid password</span>
+    </div>
+    
+    <!-- in order to group input fields we use the ' ngModelGroup ' directive and assign it a string " usersname " -->
+    <!-- in order to get a local reference to the controller for a grouped directive we use #usersname ( example ) and assign ' ngModelGroup ' -->
+    <div 
+    ngModelGroup="usersname"
+    #usersname="ngModelGroup">
+    <div class="form-group">
+        <label for="firstname">First Name:</label>
+        <input type="text" class="form-control" id="firstname" placeholder="Enter first name"
+        ngModel
+        name="firstname"
+        required>
+    </div>
+     <div class="form-group">
+        <label for="lastname">Last Name:</label>
+        <input type="text" class="form-control" id="lastname" placeholder="Enter last name"
+        ngModel
+        name="lastname"
+        required>
+    </div>
+    <!-- error message -->
+    <span class="help-block" *ngIf="!usersname.valid && usersname.touched">Please make sure your name is filled out</span>
+    </div>
+    
+    <!-- radio button -->
+    <div class="radio" *ngFor="let gender of genders">
+        <label>
+            <input type="radio"
+            ngModel
+            name="gender"
+            required
+            [value]="gender"> 
+            {{gender}}
+        <!-- [value] property binding used to populate the field -->
+        <!-- {{gender}} used to add text -->
+        </label>
+        
+    </div>
+    
+    <div class="checkbox">
+        <!-- In order to tell angular which form element you want control of you use 'ngModel' -->
+        <!-- second you add the 'name' of the input field -->
+      <label><input type="checkbox" 
+      ngModel
+      name="remember"
+      required> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default" 
+    [disabled]="!f.valid">Submit</button>
+    <!-- In order to disable form if the form is not valid use ' !f.valid '-->
+  </form>
+</div>

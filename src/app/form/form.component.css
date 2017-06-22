@@ -1,0 +1,9 @@
+/*will add a red border around input fields that have been touched but not valid*/
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+/*will add a red border around select boxes that have been touched but not valid*/
+select.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

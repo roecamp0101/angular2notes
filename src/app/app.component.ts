@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+    /*variable for interperlation*/
+    title:string = 'app works, Yeeeaahh!';
+
+    /*variable for method interperlation*/
+    singer:string = 'I can sing!';
+
+    /*method interperlation*/
+    getInfo(){
+        return this.singer;
+    }
 }

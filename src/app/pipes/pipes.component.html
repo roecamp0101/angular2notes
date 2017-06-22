@@ -1,0 +1,36 @@
+<!-- pipes transform some ouput -->
+
+
+<!-- built in pipes -->
+<p>{{info.name | uppercase }}</p> <!-- lowercase pipe -->
+
+<p>{{info.name2 | lowercase }}</p> <!-- uppcase pipe -->
+
+<p>{{info.time | date}}</p><!-- date pipe -->
+
+<p>{{info.time | date:'fullDate'}}</p> <!--date paramenter added to date pipe -->
+
+<p>{{info.money | currency:'USD':true}}</p> <!--currency paramenter added to currency pipe -->
+
+<p>{{info.time | date:'longDate' | uppercase}}</p> <!-- chaining pipes together. The date pope is chained to the uppcase pipe-->
+
+
+<!-- custom pipes -->
+<p>{{info.longname | shortenpipe}}</p> <!--custom pipe -->
+
+
+<br><br>
+
+<!-- filter pipe -->
+<input type="text" [(ngModel)]="filterinfo">
+
+<hr>
+<!-- for loop with the ' filter ' pipe attached and the ngModel as an argument -->
+<ul *ngFor="let data of datainfo | filter: filterinfo" class="list-unstyled">
+    <li>{{data}}</li>
+</ul>
+
+
+<br><br>
+<!-- async pipe -->
+{{appStatus | async }} <!-- inorder to change a promise object into a sting we use the ' async ' pipe -->

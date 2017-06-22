@@ -1,0 +1,12 @@
+<!-- Event binding of button -->
+<button class="btn btn-danger" (click)="getEventInfo()">Button Click</button>
+
+<br/><br/>
+
+<!-- Passing information in from Event binding -->
+<div class="row">
+    <div class="col-sm-4">
+        <input type="text" class="form-control" (input)="passingInfo($event)">
+        <p>{{Eventpassinginfo}}</p>
+    </div>
+</div>

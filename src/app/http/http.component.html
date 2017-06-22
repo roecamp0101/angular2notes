@@ -1,0 +1,32 @@
+<!-- button used to post info to the server from the onPost() method -->
+<button class="btn btn-danger" (click)="onPost()">Posting server information</button>
+
+<br><br>
+
+<!-- button used to get info from the server by the onGet() method-->
+<button class="btn btn-primary" (click)="onGet()">Loading server information</button>
+
+
+<br><br>
+
+<ul class="list-unstyled social-icons social-ul-list">
+     <!-- looping through server infos data from server and limiting to only 12 results -->
+      <li *ngFor="let isv of infos | slice:0:12;"> 
+               
+       <img src="{{ isv.icon_url }}" width="30" height="30" class="img-rounded"/>
+            <span class="item-text"> Badge Type: {{isv.name}}</span>
+            <span class="item-text"> | Date Earned: {{isv.earned_date | date:'short' }}</span>
+      </li>
+    </ul>
+
+<br><br>
+
+
+<ul class="list-unstyled social-icons social-ul-list">
+     <!-- looping through server items data from server and limiting to only 12 results -->
+      <li *ngFor="let item of items | slice:0:12; let i=index"> 
+               
+       <img src="{{ item.thumbnailUrl }}" width="42" height="36" class="img-rounded"/>
+            <span class="item-text">{{item.title}}</span>
+      </li>
+    </ul>
