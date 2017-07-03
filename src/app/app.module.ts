@@ -42,6 +42,7 @@ import { Shortenpipe } from './pipes/shortenpipe.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HttpComponent } from './http/http.component';
 import { HttpService } from './http/http.service';
+import { ModelDataComponent } from './model-data/model-data.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { HttpService } from './http/http.service';
     Shortenpipe,
     FilterPipe,
     HttpComponent,
+    ModelDataComponent,
    
   ],
   imports: [
