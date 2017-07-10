@@ -43,6 +43,9 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { HttpComponent } from './http/http.component';
 import { HttpService } from './http/http.service';
 import { ModelDataComponent } from './model-data/model-data.component';
+import { ModelData2Component } from './model-data2/model-data2.component';
+import { ViewchildChildcomponentComponent } from './viewchild/viewchild-childcomponent/viewchild-childcomponent.component';
+
 
 @NgModule({
   declarations: [
@@ -83,6 +86,8 @@ import { ModelDataComponent } from './model-data/model-data.component';
     FilterPipe,
     HttpComponent,
     ModelDataComponent,
+    ModelData2Component,
+    ViewchildChildcomponentComponent
    
   ],
   imports: [

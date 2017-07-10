@@ -3,3 +3,8 @@
 
 <!-- span with innerText property binding of locref value -->
 <span [innerText]="locref.value"></span>
+
+
+<app-viewchild-childcomponent></app-viewchild-childcomponent>
+<!-- Button added to parent component that will reference the * update() * method that holds the child component method * childData() * -->
+<button class="btn btn-primary btn-lg" (click)="update()">View Child Info</button>
