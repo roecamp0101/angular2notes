@@ -45,6 +45,7 @@ import { HttpService } from './http/http.service';
 import { ModelDataComponent } from './model-data/model-data.component';
 import { ModelData2Component } from './model-data2/model-data2.component';
 import { ViewchildChildcomponentComponent } from './viewchild/viewchild-childcomponent/viewchild-childcomponent.component';
+import { ExtraserversComponent } from './routes/extraservers/extraservers.component';
 
 
 @NgModule({
@@ -87,7 +88,8 @@ import { ViewchildChildcomponentComponent } from './viewchild/viewchild-childcom
     HttpComponent,
     ModelDataComponent,
     ModelData2Component,
-    ViewchildChildcomponentComponent
+    ViewchildChildcomponentComponent,
+    ExtraserversComponent
    
   ],
   imports: [

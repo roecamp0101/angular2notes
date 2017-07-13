@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; //this is how routes are added
 
 import { UserComponent } from './routes/user/user.component';
-import { HomeComponent } from './routes//home/home.component';
-import { ContactComponent } from './routes//contact/contact.component';
-import { ServersComponent } from './routes//servers/servers.component';
+import { HomeComponent } from './routes/home/home.component';
+import { ContactComponent } from './routes/contact/contact.component';
+import { ServersComponent } from './routes/servers/servers.component';
 import { ServerComponent } from './routes/servers/server/server.component';
+import { ExtraserversComponent } from './routes/extraservers/extraservers.component';
 import { ObservableComponent } from './observable/observable.component';
 
 
@@ -22,9 +23,10 @@ const routes: Routes = [
     {path: 'observable/:id', component: ObservableComponent},
     //To add child routes to a path use children 
     {path: 'servers', component: ServersComponent, children: [
-      {path: '', component: ServerComponent}
+        {path: '', component: ServerComponent}
     ]},
     {path: 'servers/:id3/:id4', component: ServersComponent},
+    {path: 'extra', component: ExtraserversComponent},
     //In order to catch all routes that are not part of your navigation add the wild card ' ** '
     //redirectTo allow you to redirect to the page you want whenever a wrong link is reached.
     {path: '**', redirectTo: ''}
