@@ -11,3 +11,13 @@
     <li *ngFor="let car of cars; let i= index">{{i}} {{car}}</li>
 </ul>
 
+
+
+
+<!-- unordered list for adding items to an array -->
+<input type="text" [(ngModel)]="grocery">
+<button class="btn btn-primary" (click)="addItems()">Add Items To Grocery Cart</button>
+
+<ul class="list-unstyled">
+    <li *ngFor="let g of grocerylist; let i= index">{{i}} {{g}}</li>
+</ul>

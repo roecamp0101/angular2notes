@@ -11,7 +11,22 @@ export class NgforComponent implements OnInit {
     
     /*array for looping with index*/
     cars: any[] = ['nissan', 'buggati', 'fararri', 'bmw', 854545];
+    
+    
+    /*two-way variable ('grocery')*/
+    grocery: any = '';
 
+    /*array to hold the input from the two-way variable ('grocery') */
+    grocerylist: any[] = [];
+
+    /*method used to add items to the array grocerylist*/
+    addItems(){
+
+        this.grocerylist.push(this.grocery);
+
+    }
+    
+    
     constructor() { }
 
     ngOnInit() {
