@@ -23,6 +23,7 @@ export class EventBindingComponent implements OnInit {
         this.Eventpassinginfo = (<HTMLInputElement>event.target).value;
     }
   
+    //Method used for toggling display
     showInfoMethod(){
       this.showinfo = !this.showinfo;
     }
