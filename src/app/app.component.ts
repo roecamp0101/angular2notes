@@ -23,7 +23,7 @@ export class AppComponent {
  //Two-way binding variable (changeInfo)
  changeInfo: any = "";
 
-//Method used to change the text of change variable
+//Method used to change the text of variable on click
  changeMethod(){
         this.change = this.changeInfo;
     }
