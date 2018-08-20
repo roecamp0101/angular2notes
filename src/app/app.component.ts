@@ -16,4 +16,16 @@ export class AppComponent {
     getInfo(){
         return this.singer;
     }
+  
+  //The text that will change on click
+ change: any = "Change This Text On click";
+  
+ //Two-way binding variable (changeInfo)
+ changeInfo: any = "";
+
+//Method used to change the text of change variable
+ changeMethod(){
+        this.change = this.changeInfo;
+    }
+  
 }
