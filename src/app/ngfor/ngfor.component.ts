@@ -16,14 +16,13 @@ export class NgforComponent implements OnInit {
     /*two-way variable ('grocery')*/
     grocery: any = '';
 
-    /*array to hold the input from the two-way variable ('grocery') */
+    /*array to hold the two-way variable input ('grocery') */
     grocerylist: any[] = [];
 
     /*method used to add items to the array grocerylist*/
     addItems(){
-
+      
         this.grocerylist.push(this.grocery);
-
     }
     
     
