@@ -22,6 +22,7 @@ export class NgforComponent implements OnInit {
     /*method used to add items to the array grocerylist*/
     addItems(){
       
+      //Pushing items from the input of the Two-way varible ('grocery') onto the Array ('grocerylist')
         this.grocerylist.push(this.grocery);
     }
     
