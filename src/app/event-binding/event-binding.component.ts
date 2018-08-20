@@ -8,7 +8,10 @@ export class EventBindingComponent implements OnInit {
     /*variable for event binding*/
     Eventbindinginfo = "Event binding information";
     /*variable for passing info*/
-    Eventpassinginfo = ''
+    Eventpassinginfo = '';
+  
+    //variable used for toggling information.
+    showinfo = true;
 
     /*method for event binding*/
     getEventInfo(){
@@ -18,6 +21,10 @@ export class EventBindingComponent implements OnInit {
     /*passing data through event binding*/
     passingInfo(event){
         this.Eventpassinginfo = (<HTMLInputElement>event.target).value;
+    }
+  
+    showInfoMethod(){
+      this.showinfo = !this.showinfo;
     }
 
     constructor() { }
