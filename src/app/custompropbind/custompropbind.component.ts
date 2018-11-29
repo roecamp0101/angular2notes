@@ -7,7 +7,9 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 })
 export class CustompropbindComponent implements OnInit {
   
-  /*Remember the Information for @Input() gets passed down from parent componenet to child component*/
+  /*Remember the Information for @Input() gets passed down from parent componenet to child component. And the child component 
+  inherits the @Input() method to reference the parent components properties.
+  */
 
     //variable from parent component  
     info = ['apple', 'orange', 'pear'];
