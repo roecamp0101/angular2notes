@@ -10,6 +10,9 @@ export class CustompropbindComponent implements OnInit {
   /*Remember the Information for @Input() gets passed down from parent componenet to child component. And the child component 
   inherits the @Input() method to reference the parent components properties.
   */
+  
+  /*The information from the Output() gets passed from child component to parent component. And the child component inherits the 
+  @Output() method with the EventEmitter method.*/
 
     //variable from parent component  
     info = ['apple', 'orange', 'pear'];
