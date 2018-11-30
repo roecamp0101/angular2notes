@@ -7,6 +7,8 @@ import { Component, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentCh
 })
 export class LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
+  /*Life cylce hooks are all the phases angular goes through when creating a new componenet*/
+  
     constructor() { }
 
     /*all life cycle hooks*/
