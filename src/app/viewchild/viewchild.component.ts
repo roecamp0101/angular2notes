@@ -8,7 +8,9 @@ import {ViewchildChildcomponentComponent} from './viewchild-childcomponent/viewc
 })
 export class ViewchildComponent implements OnInit {
   
-  /*The Viewchild is another way to get a local reference to your DOM elements. Its like a shortcut for this #f*/
+  /*The Viewchild is another way to get a local reference to your DOM elements or any element in the 
+  DOM through the typescript code. Its like a shortcut for this #f. Remeber though #f can only be used in the template
+  not in the typescript code*/
     
     /*@Viewchild gives access to local methods and properties. ElementRef provides access to native DOM element */
     
