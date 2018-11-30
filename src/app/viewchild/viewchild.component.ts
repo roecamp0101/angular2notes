@@ -7,6 +7,8 @@ import {ViewchildChildcomponentComponent} from './viewchild-childcomponent/viewc
   styleUrls: ['./viewchild.component.css']
 })
 export class ViewchildComponent implements OnInit {
+  
+  /*The Viewchild is another way to get a local reference to your DOM elements. Its like a shortcut for this #f*/
     
     /*@Viewchild gives access to local methods and properties. ElementRef provides access to native DOM element */
     
