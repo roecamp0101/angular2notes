@@ -17,7 +17,7 @@ export class BetterhighlightDirective implements OnInit {
 
     //In order to react to events the element sits on we use the @HostListener decorator
     //we add the @HostListener() and then some method you want to execute ( mouseover() )
-    //the 'mouseover' within *HostListener('mouseenter')* is a string represenation of the method you want to create
+    //the 'mouseover' within *HostListener('mouseenter')* is a string represenation of the method you want to create, so it can be called anything.
     
     @HostListener('mouseenter') mouseover(eventData: Event){
     //This HostListener represents the mouseenter event
