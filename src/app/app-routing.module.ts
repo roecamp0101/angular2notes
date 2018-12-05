@@ -29,7 +29,7 @@ const routes: Routes = [
     {path: 'extra', component: ExtraserversComponent},
     //In order to catch all routes that are not part of your navigation add the wild card ' ** '
     //redirectTo allow you to redirect to the page you want whenever a wrong link is reached.
-    {path: '**', redirectTo: ''}
+    {path: '**', redirectTo: '', pathMatch: 'full'} // pathMatch allows you to redirect only if the full path is fullfilled. ie. '/' will only redirect if router will apply the redirect if and only if navigating to '/'
 ];
 
 @NgModule({
