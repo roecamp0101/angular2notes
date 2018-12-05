@@ -34,6 +34,7 @@ const routes: Routes = [
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)], //RouterModule is used to register the routes (routes)
+    //imports: [RouterModule.forRoot(routes, {useHash: true})] //The useHash Adds a # in the middle of a link. ie. localhost:4200/#/ or localhost:4200/#/contact
     exports: [RouterModule], 
     providers: []
 })
