@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';//NgForm used to gain local reference to
 export class FormComponent implements OnInit {
     //variable for radio button form
     genders: string[] = ['male', 'female'];
+    defaultValue = "Hey I'm a default value";
 
     constructor() { }
 
