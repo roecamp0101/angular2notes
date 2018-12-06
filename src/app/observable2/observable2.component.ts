@@ -69,5 +69,11 @@ export class Observable2Component implements OnInit, OnDestroy {
         this.numberSubscription.unsubscribe();
         this.custerSubscription.unsubscribe();
     }
+  
+   const intro = Observable.interval(1000).map( //the map function get the data you get back into a new observable with any data transformation of your choice.
+      (data: number)=>{
+          return data *2;
+      }
+      )
 
     }
