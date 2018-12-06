@@ -30,7 +30,37 @@ export class Observable2Component implements OnInit, OnDestroy {
           }
       
       );*/
+      
+      //This will create an Observable from scratch; and will go through the three steps of an observable (success, error, and complete)
        
+      const intro = Observable.create( //create observable from scratch
+      (observer: Observer<string>)=>{ // Observer with the type Observer
+          setTimeout(()=> { //success step
+             observer.next('so this ah di first ting') 
+          }, 2000);
+          setTimeout(()=> { //error step
+             observer.next('so this ah di second ting') 
+          }, 4000);
+          setTimeout(()=> { //complete step
+             observer.next('so this ah di third ting') 
+          }, 7000);
+          
+         });
+      
+       intro.subscribe( //subscribe to the changes within each step of the observable (success, error, and complete)
+        (data: string) =>{  //success at 2000 (2 seconds)
+              console.log(data)
+          },
+              
+        (error: string) =>{ //error at 4000 (4 seconds)
+               console.log(error)
+              
+          },
+         () =>{ //complete at 7000 (7 seconds)
+              console.log('complete')
+          }
+                
+      )
         
     }
     
