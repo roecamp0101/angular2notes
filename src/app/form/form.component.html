@@ -86,4 +86,12 @@
     [disabled]="!f.valid">Submit</button>
     <!-- In order to disable form if the form is not valid use ' !f.valid '-->
   </form>
+  
+  <ul *ngIf="f.submitted"> <!-- If the form is submitted then show this section. -->
+      <li>firstname is: {{info.firstname}}</li>
+      <li>lastname is: {{info.lastname}}</li>
+      <li>email is: {{info.email}}</li>
+      <li>password is: {{info.password}}</li>          
+</ul>
+  
 </div>
