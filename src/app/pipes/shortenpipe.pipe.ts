@@ -30,11 +30,11 @@ export class Shortenpipe implements PipeTransform {
                                                
                  /* 
                  
-                 stringAdded = 'another string added'; //stringAdded another parameter of the value pipe will be intiliazed with 'another string added'
+                
                  
                  //Adding a parameter to a custom pipe ('limit' is the parameter of the value pipe)
                    if(value.length > limit) {
-                        return value.substr(0, limit) + '...' + stringAdded; ('stringAdded' is another parameter of the value pipe)
+                        return value.substr(0, limit) + '...' + stringAdded; ('stringAdded' is another parameter of the value pipe that will be initilaized with some string value)
                     }
                     else {
                         return value
