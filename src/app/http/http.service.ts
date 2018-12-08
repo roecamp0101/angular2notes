@@ -18,12 +18,12 @@ export class HttpService {
     //info is the data being sent to the server (ie. array, string, number, boolean)
     postServers(info:any){
         
-        //variable ' headers '  being assigned to the ' Headers ' object in angular
-        const headers = new Headers ({'Content-Type': 'application/json'}); 
+        //variable ' header '  being assigned to the ' Headers ' object in angular to identify what type of data is being sent. This is optional if your server requires headers.
+        const header = new Headers ({'Content-Type': 'application/json'}); 
         
         
         //first argument from a post request is the address, second argument is the information (ie. any array, a string, a number), third is the type of data being sent to the server (ie. json, xml, html ect...stored within the headers)
-         return this.http.post('https://teamtreehouse.com/roeroe.json', servers, {headers:headers}); 
+         return this.http.post('https://teamtreehouse.com/roeroe.json', info, {headers:header}); 
      
        
     }
