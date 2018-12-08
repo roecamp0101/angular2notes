@@ -15,14 +15,17 @@ export class HttpService {
     
    /*
     //method used to ' post ' information from a server.
-    postServers(severs:any){
+    //info is the data being sent to the server (ie. array, string, number, boolean)
+    postServers(info:any){
         
         //variable ' headers '  being assigned to the ' Headers ' object in angular
         const headers = new Headers ({'Content-Type': 'application/json'}); 
         
-        //return the ' http ' alias with the method ( post() ) to post data to the server
-        // ' headers ' option included to add headers to the 'post request
-        return this.http.post('https://teamtreehouse.com/roeroe.json', servers, {headers:headers});
+        
+        //first argument from a post request is the address, second argument is the information (ie. any array, a string, a number), third is the type of data being sent to the server (ie. json, xml, html ect...stored within the headers)
+         return this.http.post('https://teamtreehouse.com/roeroe.json', servers, {headers:headers}); 
+     
+       
     }
     
     */
