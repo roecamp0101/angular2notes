@@ -28,7 +28,7 @@ export class PipesComponent implements OnInit {
     
     //async pipe
     //appStatus assigned to a promise
-    appStatus = new Promise((resolve, reject) => {
+    appStatus = new Promise((resolve, reject) => { // This is how you assign a promise in Angular, the information get put out later (3 seconds in this case)
         setTimeout(() => {
             resolve('stable');
         }, 3000);
