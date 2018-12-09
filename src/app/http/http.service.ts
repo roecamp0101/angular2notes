@@ -31,7 +31,7 @@ export class HttpService {
     */
     
     
-    //method used to ' get ' information from a server. (A better way to get data from the sever)
+    //method used to ' get ' information from a server. **(A better way to get data from the sever)**
     getServers(){
         
         //return the ' http ' alias with the method ( get() ) to extract data from the server
