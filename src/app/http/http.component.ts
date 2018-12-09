@@ -18,7 +18,7 @@ export class HttpComponent implements OnInit {
     onGet(){
         this.httpservice.getServers() //getting the getServers() method from the httpservice service service.
             .subscribe((response: Response) => {  //subscribing to the changes in getServers() method.
-                const data = response.json(); // variable 'data' holds the data from the server ('response'). The .json() method makes it easy to access the data you get from the server
+                const data = response.json(); // variable 'data' holds the data from the server ('response'). The .json() method makes it easy to access/extract the data you get from the server
                 },
                 (error) => { 
                 console.log(error); //error method
