@@ -37,6 +37,28 @@ const routes: Routes = [
     { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule' }
 
 
+  
+  
+ /*Ahead of time compelation is the basic complation of the template to javascript before going into production.
+You have the JIT (Just In Time) compelation which the regular way things run the browser
+
+JIT
+(1)Development
+(2)Production (same as running 'ng serve')
+(3)App Download To Browser (Bootstrap the app)
+(4)Angular Parses & Complies Template to Javascript
+
+AOT
+(1)Development
+(2)Angular Parses & Complies Template to Javascript
+(3)Production (same as running 'ng serve')
+(4)App Download To Browser (Bootstrap the app)
+
+To use ng build --prod --aot
+*/ 
+  
+  
+  
 ];
 
 @NgModule({
