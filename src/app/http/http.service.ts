@@ -6,6 +6,10 @@ import { Observable } from 'rxjs/Observable';
 //import Headers to add headers to the http requests
 //import Observable to to watch for changes on http requests
 
+//The new HttpClient Module
+import { HttpClient, HttpHeaders, HttpRequest, HttpParams } from '@angular/common/http'; //HttpClient, HttpHeaders, HttpRequest is imported from the @angular/common/http
+
+
 @Injectable()
 export class HttpService {
     //using the private keyword to assign the alias ' http ' to module Http
@@ -68,5 +72,53 @@ getData(){
          .map((response:Response) => response.json()); //using the map method to turn the ' response ' request into a json information 
             
  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //The New HttpClient Code
+ constructor(private httpclient: HttpClient, private httpheaders: HttpHeaders, private httpparams: HttpParams ) { }
+
+  getData(){
+
+       return this.httpclient.get('https://jsonplaceholder.typicode.com/photos',
+        /*with the HttpClient module you can 'observe' the data your get back
+        and you can specify what kind of data you get back with 'responseType'.
+
+            {observe: "response", responseType:'json'} //this will log the default json data to you
+            {observe: "response", responseType:'text'} // this will log the json data to you but will give you it back in a text form
+            {observe: "body", responseType:'text'} // this will log the body of the 'json' back to you but in a text form.
+            {observe: "body", responseType:'arraybuffer'} //this will log the body back as an array type
+        */
+            {observe: "events" , responseType:'arraybuffer', params:this.httpparams.set('auth', 'author'), headers: this.httpheaders.set('Content-Type', 'application/json')
+        },
+
+          )
+           .map((response) => {
+             //return response;
+             console.log(response);
+             //reportProgress will report the progress of the http request
+             const req = new HttpRequest('GET', 'https://jsonplaceholder.typicode.com/photos', {reportProgress: true});
+
+           });
+
+   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
     }
