@@ -30,6 +30,13 @@ const routes: Routes = [
     //In order to catch all routes that are not part of your navigation add the wild card ' ** '
     //redirectTo allow you to redirect to the page you want whenever a wrong link is reached.
     {path: '**', redirectTo: '', pathMatch: 'full'} // pathMatch allows you to redirect only if the full path is fullfilled. ie. '/' will only redirect if router will apply the redirect if and only if navigating to '/'
+
+
+  //loadChildren will enable lazy loading in your app. You should use lazy loading on the component that has the most code.
+    /* ./recipes/recipes.module is a feature module #RecipesModule is the name of the Exported Module */
+    { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule' }
+
+
 ];
 
 @NgModule({
