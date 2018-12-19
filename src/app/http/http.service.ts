@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http'; 
-import 'rxjs/Rx';
+import 'rxjs/Rx'; //this is no longer needed
 import { Observable } from 'rxjs/Observable';
-import { map } from 'rxjs/operators'; //before using the map function you have to import it from 'rxjs/operators'
 //import module Http for http service.
 //import Headers to add headers to the http requests
 //import Observable to to watch for changes on http requests
+
+
+import { map, catchError } from 'rxjs/operators'; //before using the map function you have to import it from 'rxjs/operators'
+import { Observable, of, throwError } from 'rxjs'; //this is the new way to call an observable. You import it from 'rxjs'.
+
 
 //The new HttpClient Module
 import { HttpClient, HttpHeaders, HttpRequest, HttpParams } from '@angular/common/http'; //HttpClient, HttpHeaders, HttpRequest is imported from the @angular/common/http
