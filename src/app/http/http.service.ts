@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http'; 
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
+import { map } from 'rxjs/operators'; //before using the map function you have to import it from 'rxjs/operators'
 //import module Http for http service.
 //import Headers to add headers to the http requests
 //import Observable to to watch for changes on http requests
@@ -109,6 +110,33 @@ getData(){
            });
 
    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //This is the new way to do the map function with the pipe method
+    getInfoFromServer(){
+  return  this.http.get('https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&site=stackoverflow')
+        .pipe(map(
+            (response) =>{
+              return response;
+            }
+        ));
+
+  }
+  
+  
+  
+  
   
   
   
