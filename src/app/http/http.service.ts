@@ -7,8 +7,8 @@ import { Observable } from 'rxjs/Observable';
 //import Observable to to watch for changes on http requests
 
 
-import { map, catchError } from 'rxjs/operators'; //before using the map function you have to import it from 'rxjs/operators'
-import { Observable, of, throwError } from 'rxjs'; //this is the new way to call an observable. You import it from 'rxjs'.
+import { map, catchError } from 'rxjs/operators'; //before using the map/catchError function you have to import it from 'rxjs/operators'
+import { Observable, of, throwError } from 'rxjs'; //this is the new way to call an observable/of/throwError. You import it from 'rxjs'.
 
 
 //The new HttpClient Module
@@ -128,13 +128,23 @@ getData(){
   
   
   //This is the new way to do the map function with the pipe method
-    getInfoFromServer(){
+      getInfoFromServer(){
   return  this.http.get('https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&site=stackoverflow')
         .pipe(map(
             (response) =>{
               return response;
             }
-        ));
+        ), //end of map
+
+        catchError(
+            (error) =>{
+              return throwError('something went terriably wrong' + error);
+            }
+        )
+
+
+
+      );
 
   }
   
