@@ -7,12 +7,14 @@ import { Observable } from 'rxjs/Observable';
 //import Observable to to watch for changes on http requests
 
 
+
+//The new way of doing things
 import { map, catchError } from 'rxjs/operators'; //before using the map/catchError function you have to import it from 'rxjs/operators'
 import { Observable, of, throwError } from 'rxjs'; //this is the new way to call an observable/of/throwError. You import it from 'rxjs'.
 
-
 //The new HttpClient Module
 import { HttpClient, HttpHeaders, HttpRequest, HttpParams } from '@angular/common/http'; //HttpClient, HttpHeaders, HttpRequest is imported from the @angular/common/http
+
 
 
 @Injectable()
