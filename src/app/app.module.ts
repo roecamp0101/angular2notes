@@ -41,6 +41,7 @@ import { FormComponent } from './form/form.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { Shortenpipe } from './pipes/shortenpipe.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { FilterArrayObPipe } from './pipes/filter.pipe';
 import { HttpComponent } from './http/http.component';
 import { HttpService } from './http/http.service';
 import { ModelDataComponent } from './model-data/model-data.component';
@@ -86,6 +87,7 @@ import { ExtraserversComponent } from './routes/extraservers/extraservers.compon
     PipesComponent,
     Shortenpipe,
     FilterPipe,
+    FilterArrayObPipe,
     HttpComponent,
     ModelDataComponent,
     ModelData2Component,
