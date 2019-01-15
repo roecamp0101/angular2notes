@@ -40,7 +40,7 @@
 <input type="text" placeholder="Search reward" [(ngModel)]="searchTerm">
 
 <ul>
-  <li *ngFor="let reward of rewardList | filter:searchTerm">
+  <li *ngFor="let reward of rewardList | filterarrayob:searchTerm">
      <span>{{reward.name}}</span> -
       <span>{{reward.age}}</span>
 </ul>
