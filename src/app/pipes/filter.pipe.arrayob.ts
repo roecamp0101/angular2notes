@@ -3,7 +3,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter',
+  name: 'filterarrayob',
   pure: false
 })
 export class FilterPipe implements PipeTransform {
