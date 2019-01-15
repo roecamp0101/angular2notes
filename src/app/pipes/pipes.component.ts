@@ -34,6 +34,16 @@ export class PipesComponent implements OnInit {
         }, 3000);
     
     });
+  
+    //variable used for array object pipe (pipe used to loop through an array of objects
+    rewardList = [
+      {name:'Finn the human', age: 25},
+      {name:'skirt the human', age: 45},
+      {name:'john the human', age: 55},
+      {name:'man the human', age: 55},
+      {name:'wo the human', age: 65},
+      {name:'cool the human', age: 995}
+  ]
 
 
     ngOnInit() {
