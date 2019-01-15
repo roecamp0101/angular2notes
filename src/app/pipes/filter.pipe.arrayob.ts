@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'filterarrayob',
   pure: false
 })
-export class FilterPipe implements PipeTransform {
+export class FilterArrayObPipe implements PipeTransform {
 
   transform(items: any[], filter: string): any {
     if(!items || !filter) {
