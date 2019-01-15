@@ -41,7 +41,7 @@ import { FormComponent } from './form/form.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { Shortenpipe } from './pipes/shortenpipe.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
-import { FilterArrayObPipe } from './pipes/filter.pipe';
+import { FilterArrayObPipe } from './pipes/filter.pipe.arrayob';
 import { HttpComponent } from './http/http.component';
 import { HttpService } from './http/http.service';
 import { ModelDataComponent } from './model-data/model-data.component';
