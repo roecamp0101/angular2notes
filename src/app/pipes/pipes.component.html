@@ -21,7 +21,7 @@
 
 <br><br>
 
-<!-- filter pipe -->
+<!-- filter pipe *Just A regular Array* -->
 <input type="text" [(ngModel)]="filterinfo">
 
 <hr>
@@ -34,3 +34,13 @@
 <br><br>
 <!-- async pipe -->
 {{appStatus | async }} <!-- inorder to change a promise object into a sting we use the ' async ' pipe -->
+
+
+ <!-- filter pipe *Filter through an Array of objects* -->
+<input type="text" placeholder="Search reward" [(ngModel)]="searchTerm">
+
+<ul>
+  <li *ngFor="let reward of rewardList | filter:searchTerm">
+     <span>{{reward.name}}</span> -
+      <span>{{reward.age}}</span>
+</ul>
