@@ -27,6 +27,20 @@ export class EventBindingComponent implements OnInit {
     showInfoMethod(){
       this.showinfo = !this.showinfo;
     }
+  
+  
+    //variable for incrementing number (counter)
+    counter:number = 0;
+    
+    //Method for incrementing number
+    increment(){
+      this.counter += 1;
+    }
+    
+   //Method for decrementing number
+    decrement(){
+      this.counter -= 1;
+    }
 
     constructor() { }
 
