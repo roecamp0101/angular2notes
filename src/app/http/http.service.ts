@@ -130,9 +130,9 @@ getData(){
   
   
   //This is the new way to do the map function with the pipe method
+  //the pipe function allows links multiple functions together. So you have a single function
       getInfoFromServer(){
   return  this.http.get('https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&site=stackoverflow')
-        //the pipe function links multiple functions together. So now you have a single function
         .pipe(map(
             (response) =>{
               return response;
