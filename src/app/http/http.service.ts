@@ -123,7 +123,11 @@ getData(){
   
   
   
+  /*the map function transforms the (observable) data into whatever you want. It is recommended that you map the data 
   
+  (transform) the data in the service. This is to to keep the component slim and trim. It is recommend that you subscribe 
+  
+  within the component (the subscribe method allows you to get or extract values). Let the service do the heavy lifting. */
   
   
   
