@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 
 
 //The new way of doing things
-import { map, catchError } from 'rxjs/operators'; //before using the map/catchError function you have to import it from 'rxjs/operators'
+import { map, catchError } from 'rxjs/operators'; //before using the map/catchError function you have to import it from 'rxjs/operators'  /* 'rxjs/operators' allow for the manipulation of collections*/
 import { Observable, of, throwError } from 'rxjs'; //this is the new way to call an observable/of/throwError. You import it from 'rxjs'.
 
 //The new HttpClient Module
