@@ -14,7 +14,7 @@ export class ViewchildComponent implements OnInit {
     
     /*@Viewchild gives access to local methods and properties. ElementRef provides access to native DOM element */
     
-    /* The ViewChild decorator is used to gain access to a child components properties and methods. */
+
     /*Within the ('') is the name of the  local reference ***#f *** the second argument can be named anything */
     @ViewChild('locref') locref: ElementRef;
 
@@ -22,6 +22,7 @@ export class ViewchildComponent implements OnInit {
     /*method for local variable*/
     onlocalinfo(){
         //accessing locref nativeElement value for the DOM
+        //the locref in this case represents second argument that can be named anything.
         this.locref.nativeElement.value
     }
     
