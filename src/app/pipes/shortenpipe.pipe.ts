@@ -33,7 +33,7 @@ export class Shortenpipe implements PipeTransform {
                  /* 
                  
                 
-                 
+                //The paremeters are added within in the class, but the numbers or sting are added within the template 
                  //Adding a parameter to a custom pipe ('limit' is the parameter of the value pipe)
                    if(value.length > limit) {
                         return value.substr(0, limit) + '...' + stringAdded; ('stringAdded' is another parameter of the value pipe that will be initilaized with some string value)
