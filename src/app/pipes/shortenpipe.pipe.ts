@@ -11,6 +11,8 @@ export class Shortenpipe implements PipeTransform {
     //transform methods has two arguments value and arg
     //limit is a parameter of the value pipe
     //stringAdded is another parameter of the value pipe
+  
+  //for the 'value' of a custom pipe you attatch some javascript method, whether it is a string, number, or array. Whatever input you need you attatch that javascript method to it.
     transform(value: any, limit: number, stringAdded: string): any {
         return value.substr(0, 10) + '...';//substr is the built in javascript method substring. Which limited number of values
         //add + '...' gives a continue '... ' so that it is known that the string has been shorted.
