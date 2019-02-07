@@ -27,6 +27,15 @@ export class HomeComponent implements  {
     
 
 
+//object variable
+userinfs: {id:number, name:string, state: boolean};
+
+//Calling this in a method or ngInit
+this.userinfs = {
+    id: this.acroute.snapshot.params['id'],
+    name: this.acroute.snapshot.params['name'],
+    state: this.acroute.snapshot.params['state']
+  }
 
 
 
@@ -34,4 +43,23 @@ export class HomeComponent implements  {
 this.acroute.snapshot.params['id'],
 this.acroute.snapshot.params['name'],
 this.acroute.snapshot.params['buggy']
+
+
+
+
+
+//This is how you subcribe to the changes in your parameters for the actived/active Route
+
+
+  this.acroute.params //params is a observable
+      .subscribe(
+
+        (params: Params)=>{
+            this.userinfs.id = params['id']
+            this.userinfs.name = params['name']
+            this.userinfs.state = params['state']
+      }
+      )
+
+
 }
