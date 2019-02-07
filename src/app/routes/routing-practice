@@ -1,0 +1,28 @@
+
+import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';//Router component added from @angular/router
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements  {
+
+    //Reference to Router
+    constructor(private router: Router, private acroute: ActivatedRoute) { }
+    
+    
+    //This is how you navigate to routes programtically
+      
+        this.router.navigate(['/user']);
+        
+        
+        //This is how you navigate to relative paths programatically
+        //Angular does not know which path we are on programatically so you have to tell it. You are specifiying what the route is relativeto.
+        this.router.navigate(['user'], {relativeTo: this.acroute});
+        
+     
+    
+
+}
