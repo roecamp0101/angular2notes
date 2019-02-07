@@ -60,6 +60,36 @@ this.acroute.snapshot.params['buggy']
             this.userinfs.state = params['state']
       }
       )
+      
+      
+      
+      
+      
+      
+      
+  if you want to stop/destroy the changes in you subscription you can use   
+      
+     //variable used to hold subscription
+    destroysub:any
+       
+ 
+    
+    this.destorysub = this.acroute.params
+      .subscribe(
+
+        (params: Params)=>{
+            this.userinfs.id = params['id']
+            this.userinfs.name = params['name']
+            this.userinfs.state = params['state']
+      }
+      )
+     
+    
+       ngDestory(){
+       
+         this.destroysub.unsubscribe()
+       
+       }
 
 
 }
