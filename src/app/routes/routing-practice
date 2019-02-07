@@ -90,6 +90,52 @@ this.acroute.snapshot.params['buggy']
          this.destroysub.unsubscribe()
        
        }
+       
+       
+       
+       
+       
+    
+    
+    
+       
+   userqueryfrag{queryP:any, frag:any}  
+     
+     
+  //Calling this in a method or ngInit
+  
+  this.userqueryfrag = {
+    queryP: this.acroute.snapshot.queryParams,
+    frag: this.acroute.snapshot.fragment
+  
+  }
+  
+  
+  //This is how you get the current query Parameters and Fragments from a route.
+    
+    this.acroute.snapshot.queryParams,
+    this.acroute.snapshot.fragment
+       
+       
+       
+       
+       
+       
+    if you want to subcribe to the changes within the queryParams and Fragments you can subscribe
+    
+      this.acroute.queryParams.subscribe()
+      this.acroute.fragment.subscribe()
+       
+       
+       
+    
+       
+       
+       
+       
+       
+       
+       
 
 
 }
