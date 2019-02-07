@@ -20,7 +20,8 @@ export class HomeComponent implements  {
         
         //This is how you navigate to relative paths programatically
         //Angular does not know which path we are on programatically so you have to tell it. You are specifiying what the route is relativeto.
-        this.router.navigate(['user'], {relativeTo: this.acroute});
+        
+        this.router.navigate(['user'], {relativeTo: this.acroute}); //the ActivatedRoute gets the current route
         
      
     
