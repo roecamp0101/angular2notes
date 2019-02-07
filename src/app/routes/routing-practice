@@ -31,6 +31,7 @@ export class HomeComponent implements  {
 
 
 //This is how you get current active routes parameters. Any paramenter you put into your main nav can be gotten. ie... /:id or /:name or /:buggy just name the name of the paramenter and you snapshot and get that parameter
-this.acroute.snapshot.params['id']
-
+this.acroute.snapshot.params['id'],
+this.acroute.snapshot.params['name'],
+this.acroute.snapshot.params['buggy']
 }
