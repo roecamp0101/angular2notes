@@ -1,0 +1,74 @@
+
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="exampleInputName1">Name</label>
+    <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter name"
+    formControlName="name">
+    <div class="text-danger" *ngIf="signupForm.get('name').invalid && signupForm.get('name').touched">
+          Please choose a username.
+        </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+    formControlName="email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div class="text-danger" *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched">
+          Please choose a email.
+        </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+    formControlName="password">
+    <div class="text-danger" *ngIf="signupForm.get('password').invalid && signupForm.get('password').touched">
+          Please choose a password
+        </div>
+  </div>
+
+
+<div formGroupName="userData">
+
+  <div class="form-group">
+     <label for="exampleFormControlSelect2">Example multiple select</label>
+     <select multiple class="form-control" id="exampleFormControlSelect2" formControlName="select">
+       <option>1</option>
+       <option>2</option>
+       <option>3</option>
+       <option>4</option>
+       <option>5</option>
+     </select>
+     <div class="text-danger" *ngIf="signupForm.get('userData.select').invalid && signupForm.get('userData.select').untouched">
+           Please select something
+         </div>
+   </div>
+   <div class="form-group">
+     <label for="exampleFormControlTextarea1">Example textarea</label>
+     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="info"></textarea>
+     <div class="text-danger" *ngIf="signupForm.get('userData.info').invalid && signupForm.get('userData.info').touched">
+           Please enter some info
+         </div>
+   </div>
+
+</div>
+
+
+
+  <div class="form-group form-check" *ngFor="let g of gender">
+      <label>
+    <input type="radio" class="form-check-input" [value]="g"
+    formControlName="gender">
+          {{g}}
+</label>
+  </div>
+
+ <div formArrayName="hobbies" class="mb-5">
+    <h4> Your hobbies </h4>
+    <button class="btn btn-primary" (click)="addHobbys()">Add Hobby</button>
+    <div class="form-group" *ngFor="let hobby of signupForm.get('hobbies').controls; let i=index">
+      <input type="text" [formControlName]="i">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
