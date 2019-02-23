@@ -28,21 +28,19 @@ export class HomeComponent implements  {
 
 
 //object variable
-userinfs: {id:number, name:string, state: boolean};
+user: {id:number, name:string};
 
 //Calling this in a method or ngInit
-this.userinfs = {
+this.user = {
     id: this.acroute.snapshot.params['id'],
-    name: this.acroute.snapshot.params['name'],
-    state: this.acroute.snapshot.params['state']
+    name: this.acroute.snapshot.params['name']
   }
 
 
 
-//This is how you get current active routes parameters. Any paramenter you put into your main nav can be gotten. ie... /:id or /:name or /:buggy just name the name of the paramenter and you snapshot and get that parameter
+//This is how you get current active routes parameters. Any paramenter you put into your main nav can be gotten. ie... /:id or /:name just name the name of the paramenter and you snapshot and get that parameter
 this.acroute.snapshot.params['id'],
-this.acroute.snapshot.params['name'],
-this.acroute.snapshot.params['buggy']
+this.acroute.snapshot.params['name']
 
 
 
@@ -51,15 +49,17 @@ this.acroute.snapshot.params['buggy']
 //This is how you subcribe to the changes in your parameters for the actived/active Route
 
 
-  this.acroute.params //params is a observable
-      .subscribe(
 
-        (params: Params)=>{
-            this.userinfs.id = params['id']
-            this.userinfs.name = params['name']
-            this.userinfs.state = params['state']
-      }
-      )
+  this.acroute.params  //params is a observable
+     .subscribe(
+       (params: Params) => {
+           this.user = {
+             id: params['id'],
+             name: params['name']
+        }
+     }
+   );
+  
       
       
       
@@ -73,16 +73,17 @@ this.acroute.snapshot.params['buggy']
     destroysub:any
        
  
-    
-    this.destorysub = this.acroute.params
-      .subscribe(
 
-        (params: Params)=>{
-            this.userinfs.id = params['id']
-            this.userinfs.name = params['name']
-            this.userinfs.state = params['state']
-      }
-      )
+
+    this.destorysub = this.acroute.params 
+      .subscribe(
+       (params: Params) => {
+           this.user = {
+             id: params['id'],
+             name: params['name']
+        }
+     }
+   );
      
     
        ngDestory(){
